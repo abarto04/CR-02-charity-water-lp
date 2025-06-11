@@ -1,6 +1,7 @@
 /* Normalize box sizing and remove default spacing */
 html, body {
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,6 +9,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
+  overflow-x: hidden; /* prevent side scroll */
 }
 
 /* Ensure inherited box-sizing */
@@ -19,7 +21,7 @@ html, body {
 .page-wrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh; /* changed from height: 100vh */
 }
 
 /* Header styles */
@@ -134,7 +136,7 @@ html, body {
 }
 
 .right-column img:hover {
-  transform: scale(1.01); /* smaller zoom */
+  transform: scale(1.04); /* zoomed in more */
 }
 
 /* Responsive layout */
@@ -175,6 +177,7 @@ html, body {
     font-size: 1.2em;
   }
 }
+
 
 
 
