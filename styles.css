@@ -4,8 +4,6 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Proxima Nova', 'Avenir', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: white;
   height: 100%;
   width: 100%;
@@ -15,26 +13,24 @@ html, body {
   box-sizing: inherit;
 }
 
-/* Page Wrapper */
+/* Page Structure */
 .page-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 /* Header */
 .white-header {
-  background-color: #fff;
+  background-color: white;
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  flex-shrink: 0;
 }
 
 .header-content {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .header-logo {
@@ -42,16 +38,16 @@ html, body {
 }
 
 .header-title {
-  font-size: 1.2em;
-  color: #000;
+  font-size: 1.3em;
+  color: black;
+  font-weight: 600;
 }
 
-/* Main Container */
+/* Main container */
 .container {
   display: flex;
+  flex-wrap: nowrap;
   width: 100%;
-  flex: 1;
-  min-height: calc(100vh - 60px); /* adjust for header height */
 }
 
 /* Left Column */
@@ -62,44 +58,42 @@ html, body {
   min-width: 300px;
 }
 
-/* Main Text Section */
+/* Text section (top left) */
 .text-section {
   background-color: #003366;
   color: white;
-  padding: 60px 40px;
-  text-align: center;
+  padding: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1;
+  text-align: center;
 }
 
 .text-wrapper {
-  max-width: 500px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 30px;
+  gap: 20px;
+  max-width: 500px;
 }
 
 .text-wrapper h1 {
-  font-size: 2.6em;
+  font-size: 2.4em;
   line-height: 1.4;
-  font-weight: 700;
-  margin: 0;
+  font-weight: bold;
 }
 
-/* Donate Button */
+/* Donate button */
 .donate-button {
   background-color: #FFC907;
   color: black;
   padding: 15px 30px;
   font-size: 1em;
+  font-weight: bold;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  font-weight: bold;
 }
 
 .donate-button:hover {
@@ -107,7 +101,7 @@ html, body {
   transform: translateY(-2px);
 }
 
-/* Subtext Section */
+/* Subtext section (bottom left) */
 .subtext-section {
   background-color: #bf6c46;
   color: white;
@@ -120,7 +114,7 @@ html, body {
 /* Right Column */
 .right-column {
   width: 50%;
-  height: auto;
+  overflow: hidden;
 }
 
 .right-column img {
@@ -128,9 +122,14 @@ html, body {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease;
 }
 
-/* Responsive */
+.right-column img:hover {
+  transform: scale(1.03);
+}
+
+/* Mobile Styles */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -140,8 +139,13 @@ html, body {
     width: 100%;
   }
 
+  .right-column img {
+    height: auto;
+    max-height: 400px;
+  }
+
   .text-wrapper h1 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
   .subtext-section {
@@ -156,12 +160,8 @@ html, body {
   .header-title {
     font-size: 1em;
   }
-
-  .right-column img {
-    height: auto;
-    max-height: 400px;
-  }
 }
+
 
 
 
