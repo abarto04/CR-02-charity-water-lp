@@ -15,12 +15,152 @@ html, body {
   box-sizing: inherit;
 }
 
-/* Full-page structure */
+/* Page Wrapper */
 .page-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+/* Header */
+.white-header {
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-logo {
+  height: 40px;
+}
+
+.header-title {
+  font-size: 1.2em;
+  color: #000;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  min-height: calc(100vh - 60px); /* adjust for header height */
+}
+
+/* Left Column */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-width: 300px;
+}
+
+/* Main Text Section */
+.text-section {
+  background-color: #003366;
+  color: white;
+  padding: 60px 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.text-wrapper {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.text-wrapper h1 {
+  font-size: 2.6em;
+  line-height: 1.4;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Donate Button */
+.donate-button {
+  background-color: #FFC907;
+  color: black;
+  padding: 15px 30px;
+  font-size: 1em;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+}
+
+.donate-button:hover {
+  background-color: #e6b800;
+  transform: translateY(-2px);
+}
+
+/* Subtext Section */
+.subtext-section {
+  background-color: #bf6c46;
+  color: white;
+  padding: 40px;
+  font-size: 1.4em;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Right Column */
+.right-column {
+  width: 50%;
+  height: auto;
+}
+
+.right-column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-column, .right-column {
+    width: 100%;
+  }
+
+  .text-wrapper h1 {
+    font-size: 2em;
+  }
+
+  .subtext-section {
+    font-size: 1.2em;
+    padding: 30px 20px;
+  }
+
+  .header-logo {
+    height: 30px;
+  }
+
+  .header-title {
+    font-size: 1em;
+  }
+
+  .right-column img {
+    height: auto;
+    max-height: 400px;
+  }
 }
 
 
