@@ -44,7 +44,7 @@ body {
 .container {
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 60px); /* Adjust based on header height */
+  height: calc(100vh - 60px); /* full viewport minus header */
 }
 
 .left-column {
@@ -74,7 +74,7 @@ body {
 }
 
 .text-wrapper h1 {
-  font-size: 2.40em;
+  font-size: 2.4em;
   line-height: 1.5;
 }
 
@@ -125,7 +125,7 @@ body {
 }
 
 .right-column img:hover {
-  transform: scale(2);
+  transform: scale(1.05);
 }
 
 /* 🔁 Responsive design for mobile and tablet */
@@ -168,6 +168,7 @@ body {
     height: 30px;
   }
 }
+
 
 
   .header-logo {
