@@ -1,16 +1,13 @@
-/* Reset */
+ box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Proxima Nova', 'Avenir', sans-serif;
-  background-color: white;
   height: 100%;
   width: 100%;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
+  font-family: 'Proxima Nova', 'Avenir', sans-serif;
+  background-color: white;
 }
 
 /* Page Structure */
@@ -24,7 +21,7 @@ html, body {
 .white-header {
   background-color: white;
   padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
@@ -43,12 +40,13 @@ html, body {
   font-weight: 600;
 }
 
-/* Main container */
+/* Main Layout */
 .container {
   display: flex;
+  flex-direction: row;
   flex: 1;
-  height: calc(100vh - 60px); /* Adjust this if your header height changes */
   width: 100%;
+  min-height: calc(100vh - 60px); /* header height */
 }
 
 /* Left Column */
@@ -56,25 +54,20 @@ html, body {
   display: flex;
   flex-direction: column;
   width: 50%;
-  min-width: 300px;
-}
-
-/* Text section (top left) */
-.text-section {
   background-color: #003366;
   color: white;
-  padding: 60px 40px;
+}
+
+.text-section {
   flex: 1;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 40px;
   text-align: center;
 }
 
 .text-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
   max-width: 500px;
 }
 
@@ -82,10 +75,9 @@ html, body {
   font-size: 2.4em;
   line-height: 1.4;
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 20px;
 }
 
-/* Donate button */
 .donate-button {
   background-color: #FFC907;
   color: black;
@@ -103,14 +95,14 @@ html, body {
   transform: translateY(-2px);
 }
 
-/* Subtext section (bottom left) */
+/* Subtext Section */
 .subtext-section {
   background-color: #bf6c46;
-  color: white;
   padding: 40px;
   font-size: 1.4em;
   line-height: 1.6;
   text-align: center;
+  color: white;
 }
 
 /* Right Column */
@@ -131,11 +123,10 @@ html, body {
   transform: scale(1.03);
 }
 
-/* Mobile Styles */
+/* Mobile */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
-    height: auto;
   }
 
   .left-column, .right-column {
@@ -164,23 +155,4 @@ html, body {
     font-size: 1em;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  .header-logo {
-    height: 30px;
-  }
 
