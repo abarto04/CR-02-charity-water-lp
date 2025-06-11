@@ -1,4 +1,3 @@
-/* ✅ Ensure full height for layout */
 html, body {
   height: 100%;
   margin: 0;
@@ -18,10 +17,19 @@ body {
   color: white;
 }
 
+/* Page wrapper controls full height layout */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header stays at top */
 .white-header {
   background-color: white;
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 0 0 auto;
 }
 
 .header-content {
@@ -40,18 +48,18 @@ body {
   font-size: 1.2em;
 }
 
-/* ✅ Full height layout */
+/* Main content fills remaining height */
 .container {
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 60px); /* full viewport minus header */
+  flex: 1 1 auto;
+  min-height: 0; /* ensures no overflow */
 }
 
 .left-column {
   flex: 1;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .text-section {
@@ -62,7 +70,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0;
 }
 
 .text-wrapper {
@@ -108,7 +115,7 @@ body {
   text-align: center;
 }
 
-/* ✅ Stretch image column to full height */
+/* ✅ Right column stretches fully */
 .right-column {
   flex: 1;
   display: flex;
@@ -116,7 +123,7 @@ body {
   overflow: hidden;
 }
 
-/* ✅ Make image cover entire right side */
+/* ✅ Image fully fills right side */
 .right-column img {
   width: 100%;
   height: 100%;
@@ -125,12 +132,11 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* ✅ Reduce hover zoom effect */
 .right-column img:hover {
-  transform: scale(1.02);
+  transform: scale(1.01); /* Less zoom */
 }
 
-/* 🔁 Responsive design for mobile and tablet */
+/* 🔁 Responsive layout */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -170,6 +176,7 @@ body {
     height: 30px;
   }
 }
+
 
 
 
