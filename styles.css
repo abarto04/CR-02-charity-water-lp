@@ -1,121 +1,16 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-body {
-  font-family: 'Proxima Nova', 'Avenir', Georgia, sans-serif;
-  background-color: white;
-  color: white;
-}
-
-/* Page wrapper controls full height layout */
 .page-wrapper {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
 
-/* Header stays at top */
-.white-header {
-  background-color: white;
-  padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  flex: 0 0 auto;
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.header-logo {
-  height: 40px;
-  width: auto;
-}
-
-.header-title {
-  color: black;
-  font-size: 1.2em;
-}
-
-/* Main content fills remaining height */
 .container {
   display: flex;
   flex-direction: row;
   flex: 1 1 auto;
-  min-height: 0; /* ensures no overflow */
+  min-height: 0;
 }
 
-.left-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.text-section {
-  background-color: #003366;
-  color: white;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.text-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 40px;
-}
-
-.text-wrapper h1 {
-  font-size: 2.4em;
-  line-height: 1.5;
-}
-
-.donate-button {
-  background-color: #FFC907;
-  color: black;
-  padding: 15px 30px;
-  font-size: 1em;
-  font-weight: bold;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.donate-button:hover {
-  background-color: #d4ab05;
-  transform: scale(1.05);
-}
-
-.subtext-section {
-  background-color: #bf6c46;
-  color: white;
-  padding: 40px;
-  font-size: 1.7em;
-  line-height: 1.6;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-/* ✅ Right column stretches fully */
 .right-column {
   flex: 1;
   display: flex;
@@ -123,7 +18,6 @@ body {
   overflow: hidden;
 }
 
-/* ✅ Image fully fills right side */
 .right-column img {
   width: 100%;
   height: 100%;
@@ -136,46 +30,6 @@ body {
   transform: scale(1.01); /* Less zoom */
 }
 
-/* 🔁 Responsive layout */
-@media (max-width: 900px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .left-column,
-  .right-column {
-    flex: none;
-    width: 100%;
-    height: auto;
-  }
-
-  .text-wrapper {
-    padding: 30px 20px;
-    gap: 16px;
-  }
-
-  .text-wrapper h1 {
-    font-size: 1.8em;
-  }
-
-  .subtext-section {
-    font-size: 1.2em;
-    padding: 30px 20px;
-  }
-
-  .right-column img {
-    height: auto;
-    max-height: 400px;
-  }
-
-  .header-title {
-    font-size: 1.2em;
-  }
-
-  .header-logo {
-    height: 30px;
-  }
-}
 
 
 
