@@ -1,14 +1,18 @@
  box-sizing: border-box;
 }
 
+/* Reset */
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
+  box-sizing: border-box;
   font-family: 'Proxima Nova', 'Avenir', sans-serif;
   background-color: white;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
+
 
 /* Page Structure */
 .page-wrapper {
